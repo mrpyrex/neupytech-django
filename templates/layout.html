@@ -1,13 +1,73 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/materialize.min.css" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <title>NeuPyTech</title>
 </head>
 <body>
-{% block content %}
-{% endblock %}
+    
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="{% url 'pages:home' %}" class="brand-logo">neupytech</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'pages:about' %}">About Us</a></li>
+                <li><a href="{% url 'pages:portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+                <li><a href="{% url 'posts:list' %}">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="{% url 'pages:about' %}">About Us</a></li>
+        <li><a href="{% url 'pages:portfolio' %}">Portfolio</a></li>
+        <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+        <li><a href="{% url 'posts:list' %}">Blog</a></li>
+    </ul> 
+
+    <!-- Django Template Tags -->
+    {% block content %}
+    {% endblock %}
+
+<footer class="main-footer">
+    <div class="row">
+        <div id="contact" class="col s12 m6 text-center">
+            <h5>Contact Us</h5>
+            <p><i class="fas fa-road"></i>14, Ring Road Opp. All Weather, Idua, Eket</p>
+            <p><i class="fas fa-phone-volume"></i>+234 811 5234 897</p>
+            <p><i class="fas fa-envelope"></i>info@neupytech.com</p>
+            <a href="https://web.facebook.com/neupytech/" target="_blank"><i class="fab fa-facebook-f mr-4"></i></a>
+            <a href="https://twitter.com/neupytech" target="_blank"><i class="fab fa-twitter mr-4"></i></a>
+            <a href="" target="_blank"><i class="fab fa-instagram mr-4"></i></a>
+        </div>
+        <div class="col s12 m6" id="map"></div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="s12">
+                <p>Copyright NEUPYTECH &copy;. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    <script src="{% static "js/materialize.min.js" %}"></script>
+
+    <!-- Mobile Navbar -->
+    <script>
+       const sideNav = document.querySelector('.sidenav');
+       M.Sidenav.init(sideNav, {});       
+    </script>
 </body>
 </html>
