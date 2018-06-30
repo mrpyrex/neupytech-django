@@ -1,10 +1,108 @@
 {% extends 'layout.html' %}
+{% load static %}
     
 {% block content %}
-    <h1>Hello from Home!</h1>
+
+
+
+<header id="hero">
+    <div class="inner">
+        <div class="overlay center">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4">Website Design/Development <span id="join"></span>& Digital Marketing</h1>
+                    <p>We design and develop websites for businesses with stunning results</p>
+                    <a class="btn" href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Showcase Section
+==================
+-->
+
+<section class="section" id="showcase">
+    <div class="row">
+        <div class="box col s12 m3 center">
+            <div class="card blue-grey darken-1">
+                <i class="fas fa-gem"></i>
+                <h5 class="">Research/Strategy</h5>
+                <p class="">We mine deep to bring you the best with regards to your specific business needs. And then we put the strategy to achieving your goal in motion.</p>
+            </div>
+        </div>
+        <div class="box col s12 m3 center">
+            <div class="card blue-grey darken-1">
+                <i class="fas fa-desktop"></i>
+                <h5 class="">UI/UX Design</h5>
+                <p class="">We take the research and built website that takes the user experience into consideration.</p>
+            </div>
+        </div>
+        <div class="box col s12 m3 center">
+            <div class="card blue-grey darken-1">
+                <i class="fas fa-code"></i>
+                <h5 class="">Web Development</h5>
+                <p class="">We build more than just a website, we come up with the best solutions to bring the results your desire.</p>
+            </div>  
+        </div>
+        <div class="box col s12 m3 center">
+            <div class="card blue-grey darken-1">
+                <i class="fas fa-cart-arrow-down"></i>
+                <h5 class="">Marketing</h5>
+                <p class="">We empower your customers and make them feel confident in your product through marketing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section
+==================
+-->
+
+<section class="center" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="">Who We Are</h5>
+                <p>We are focused on helping our clients accomplish wonderfull things through online marketing. We start typically by creating a brand new staunning website or redesigning an existing one; evolving into a long-term relationship with them.
+
+                Our projects ride on analytics and constant improvement. So we leverage on technology so we do what we do best so that our clients can focus on running their business with all confidence!</p>
+            </div>
+            <a class="btn" href="#">Read More</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Subscribe Section
+==================
+-->
+
+<section class="section center container">
+    <h5>YOU WANT DEALS?</h5>
+    <P>Subscribe to get our latest deals</P>
     <form action="{% url 'pages:home' %}" method="POST">
         {% csrf_token %}
         {{ join }}
-        <button>Join</button>
+        <button class="btn">Join</button>
     </form>
+</section>
+
+<!-- Team Section
+==================
+-->
+
+<section class="section" id="team">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="">Meet The Team</h5>
+                <p>Our dynamic team are both talented and courteous, bringing unique skills and great levels of expertise to every project.</p>
+                <a href="#" class="btn">Learn more</a>
+            </div>
+        </div>
+    </div>
+</section>
+    
 {% endblock %}

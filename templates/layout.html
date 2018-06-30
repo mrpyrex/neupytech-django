@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/materialize.min.css" %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
     <title>NeuPyTech</title>
 </head>
 <body>
@@ -41,7 +42,7 @@
 
 <footer class="main-footer">
     <div class="row">
-        <div id="contact" class="col s12 m6 text-center">
+        <div id="contact" class="col s12 m6">
             <h5>Contact Us</h5>
             <p><i class="fas fa-road"></i>14, Ring Road Opp. All Weather, Idua, Eket</p>
             <p><i class="fas fa-phone-volume"></i>+234 811 5234 897</p>
@@ -53,7 +54,7 @@
         <div class="col s12 m6" id="map"></div>
     </div>
     
-    <div class="container">
+    <div class="container center">
         <div class="row">
             <div class="s12">
                 <p>Copyright NEUPYTECH &copy;. All rights reserved.</p>
@@ -62,6 +63,26 @@
     </div>
 </footer>
         
+
+<!-- Map JS
+==================
+-->
+    <script>
+        function initMap () {
+          var options = {
+            zoom: 8,
+            center: {lat:4.9300,lng:7.8722}
+          }
+          var map = new google.maps.Map (document.getElementById('map'), options);
+          var marker = new google.maps.Marker ({
+            position: {lat:4.6467,lng:7.9429},
+            map:map
+          })
+        }
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVEe2iQi3o5-_CcZ0CSV5MJ-18pJTJr3o&callback=initMap"
+    async defer></script>
     <script src="{% static "js/materialize.min.js" %}"></script>
 
     <!-- Mobile Navbar -->
