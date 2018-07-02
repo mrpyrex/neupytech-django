@@ -15,3 +15,11 @@
     height: 400px;
     background-color: aquamarine;
 }
+
+.card {
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 1.9rem
+}
