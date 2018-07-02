@@ -1,25 +1,37 @@
-.overlay {
-    background: url('img/laptop.jpeg') no-repeat;
+body, html *{
+    margin:0;
+}
+
+#hero {
+    background: url(../img/laptop.jpeg);
     background-attachment: fixed;
     background-size: cover;
-    min-height: 400px;
+    min-height: 300px;
     background-position: center;
-    border-radius: 0;
-    color: #fff;
-    margin-top: 80px;
 }
-/* Map Styling */
 
-#map {
-    width: 100%;
-    height: 400px;
-    background-color: aquamarine;
+
+#hero h1 {
+    font-size: 1.9rem;
+    padding-top: 50px;
 }
 
 .card {
     padding: 20px;
+    border: 1px solid #00dba0;
+
 }
 
-#hero h1 {
-    font-size: 1.9rem
+.fas {
+    font-size: 4.0rem;
+    color: #00dba0;
 }
+
+/* Map Styling */
+
+#map {
+    height: 400px;
+    background-color: aquamarine;
+}
+
+
