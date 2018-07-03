@@ -3,49 +3,43 @@
     
 {% block content %}
 
-<header id="hero">
-    <div class="container center">
-        <h1>Website Design/Development <span id="join"></span>& Digital Marketing</h1>
-        <p>We design and develop websites for businesses with stunning results</p>
-        <a class="btn" href="#">Contact Us</a>
+<header class="main-header">
+    <div class="overlay">
+        <div class="container center">
+            <h1>Website Design/Development <span id="join"></span>& Digital Marketing</h1>
+            <p class="flow-text">We design and develop websites for businesses with stunning results</p>
+            <a class="btn" href="{% url 'contact:contact' %}">Contact Us</a>
+        </div>
     </div>
 </header>
 
-
-<!-- Showcase Section
+<!-- Cards Section
 ==================
 -->
 
-<section class="section" id="showcase">
+<section class="section-card center">
     <div class="row">
-        <div class="box col s12 m3 center">
-            <div class="card blue-grey darken-1">
-                <i class="fas fa-gem"></i>
-                <h5 class="">Research/Strategy</h5>
-                <p class="">We mine deep to bring you the best with regards to your specific business needs. And then we put the strategy to achieving your goal in motion.</p>
+        <div class="col s12 m6 l3">
+            <h4>UI/UX Design</h4>
+            <i class="material-icons">desktop_windows</i>
+            <p>We take the research and build website that takes the user experience into consideration.</p>
+        </div>
+        <div class="col s12 m6 l3">
+                <h4>Web Development</h4>
+                <i class="material-icons">build</i>
+                <p>We build more than just a website, we come up with the best solutions to bring the results your desire.</p>
+                
             </div>
-        </div>
-        <div class="box col s12 m3 center">
-            <div class="card blue-grey darken-1">
-                <i class="fas fa-desktop"></i>
-                <h5 class="">UI/UX Design</h5>
-                <p class="">We take the research and built website that takes the user experience into consideration.</p>
-            </div>
-        </div>
-        <div class="box col s12 m3 center">
-            <div class="card blue-grey darken-1">
-                <i class="fas fa-code"></i>
-                <h5 class="">Web Development</h5>
-                <p class="">We build more than just a website, we come up with the best solutions to bring the results your desire.</p>
-            </div>  
-        </div>
-        <div class="box col s12 m3 center">
-            <div class="card blue-grey darken-1">
-                <i class="fas fa-cart-arrow-down"></i>
-                <h5 class="">Marketing</h5>
-                <p class="">We empower your customers and make them feel confident in your product through marketing.</p>
-            </div>
-        </div>
+            <div class="col s12 m6 l3">
+                    <h4>Research/Strategy</h4>
+                    <i class="material-icons">domain</i>
+                    <p class="">We mine deep to bring you the best with regards to your specific business needs. And then we put the strategy to achieving your goal in motion.</p>
+                </div>
+                <div class="col s12 m6 l3">
+                        <h4>DIGITAL Marketing</h4>
+                        <i class="material-icons">group_add</i>
+                        <p class="">We empower your customers and make them feel confident in your product through marketing.</p>
+                    </div>
     </div>
 </section>
 
@@ -92,7 +86,7 @@
             <div class="col s12">
                 <h5 class="">Meet The Team</h5>
                 <p>Our dynamic team are both talented and courteous, bringing unique skills and great levels of expertise to every project.</p>
-                <a href="#" class="btn">Learn more</a>
+                <a href="{% url 'team:team' %}" class="btn">Learn more</a>
             </div>
         </div>
     </div>
