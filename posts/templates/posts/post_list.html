@@ -5,9 +5,12 @@
 <h1>Hello from Posts</h1>
 <div class="container">
   <div class="row">
-    {% for post in posts %}
     <div class="col s12 m4">
-      <div class="card">
+      
+    </div>
+    <div class="col s12 m8">
+    {% for post in posts %}
+        <div class="card">
         <div class="card-image">
         <img src="{{ post.thumb.url }}" alt=""/>
         </div>
@@ -16,11 +19,10 @@
           <p><p>{{ post.date }}</p></p>
         </div>
       </div>
-    </div>
     {% endfor %}
   </div>
 </div>
-
+</div>
 {% endblock %}
 
 
