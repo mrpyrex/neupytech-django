@@ -1,5 +1,16 @@
-body {
+body, html {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    background-color: #3385ff;
+}
+
+nav {
+    background: #3385ff;
 }
 
 .overlay {
@@ -10,6 +21,10 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+#showcase {
+    padding-top: 150px;
 }
 
 .main-header {
@@ -25,5 +40,22 @@ body {
 .card {
     width: 200px;
     height: 100%;
-    margin: 20px !important;
+}
+
+.tech-map {
+    position: relative;
+}
+
+.tech-map .card-panel{
+    position: relative;
+    z-index: 1;
+}
+
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
