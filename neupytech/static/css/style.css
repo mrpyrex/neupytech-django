@@ -37,11 +37,17 @@ nav {
     position: relative;
 }
 
-.card {
+#about {
+    padding: 20px;
+}
+/* .card {
     width: 200px;
     height: 100%;
-}
+} */
 
+.about h1 {
+    margin-left: 40px;
+}
 .tech-map {
     position: relative;
 }
@@ -51,6 +57,9 @@ nav {
     z-index: 1;
 }
 
+.fas, .fab {
+    margin: 20px;
+}
 #map {
     position: absolute;
     height: 100%;

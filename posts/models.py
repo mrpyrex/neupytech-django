@@ -7,6 +7,7 @@ class Post(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(default=timezone.now)
+    thumb = models.ImageField(default='default.png', blank=True, upload_to='images/')
 
     def __str__(self):
         return self.title

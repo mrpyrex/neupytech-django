@@ -1,5 +1,24 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h1>Hello From About</h1>
+    <section class="section about">
+        <h1>About Us</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+               
+                </div>
+                <div class="col s12 m8">
+                    <h2>Overview</h2>
+                    <p class="flow-text">At <a href="{% url 'pages:home' %}">NEUPYTECH</a>, we are focused on helping our clients accomplish wonderfull things through online marketing. We start typically by creating a brand new staunning website or redesigning an existing one; evolving into a long-term relationship with them.
+                    <br><br>
+                    Our projects ride on analytics and constant improvement. So we leverage on technology so we do what we do best so that our clients can focus on running their business with all confidence!</p>
+
+                    <h2>Our Process</h2>
+                    <p class="flow-text">With a combination of client relationships, methodology and dedication, we bring to our clients the specific services on time and on the budget.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 {% endblock %}
