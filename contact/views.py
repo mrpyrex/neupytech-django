@@ -29,4 +29,3 @@ def contact(request):
     else:
         form = ContactForm()
     return render(request, 'contact/contact.html', {'form': form})
-    
