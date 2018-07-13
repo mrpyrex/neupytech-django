@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'neupytech.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'neudb',
+        'NAME': 'pyrexdb',
         'USER': 'postgres',
         'PASSWORD': 'Elyon2601',
         'HOST': 'localhost',
