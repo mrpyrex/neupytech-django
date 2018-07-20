@@ -4,8 +4,7 @@
 {% block content %}
 
 <div class="container">
-    
-        <h1>Contact Us</h1>
+    <h1>Contact Us</h1>
         <div class="row">
             <form class="col s12" method="POST" action="{% url 'contact:contact' %}">
                 {% csrf_token %}
@@ -24,7 +23,7 @@
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">email</i>
-                        {{ form.sender }}
+                        {{ form.email }}
                         <label for="icon_email">Email</label>
                     </div>
                     </div>
@@ -35,14 +34,14 @@
                             <label for="icon_prefix2">Message</label>
                         </div>
                     </div>
-                            
+                    <div class="row">
+                        <div class="g-recaptcha" data-sitekey="6LcDemQUAAAAAAdACzPwKZb0QRrSZqyXHmJpbJGc"></div>    
+                    </div>
                 <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
                 </button>
             </form>  
         </div>
-    
-    
 </div> 
 
 

@@ -1,31 +1,31 @@
-from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
-from django.template.loader import get_template
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .models import Contact
 from .forms import ContactForm
 
-def contact(request):
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
+# Create your views here.
+
+
+def contactView(request):
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
         form = ContactForm(request.POST)
-        # check whether it's valid:
         if form.is_valid():
             name = form.cleaned_data['name']
-            comment = form.cleaned_data['message']
+            from_email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
             subject = 'Contact Received'
-            message = '%s %s' %(comment, name)
-            emailFrom = form.cleaned_data['sender']
-            emailTo = [settings.EMAIL_HOST_USER]
-            send_mail(subject, message, emailFrom, emailTo, fail_silently=True)
-        
-            # saving contact form data to dbase
+            comment = '%s %s' %(message, name)
+            try:
+                send_mail(subject, comment, from_email, ['neupytechng@gmail.com'], fail_silently=False)
+                new_contact = Contact(name=request.POST['name'], from_email=request.POST['email'], phone=request.POST['phone'], message=request.POST['message'])
+                new_contact.save()
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('contact:success')
+    return render(request, "contact/contact.html", {'form': form})
 
-            new_contact = Contact(name=request.POST['name'], sender=request.POST['sender'], phone=request.POST['phone'], message=request.POST['message'])
-            new_contact.save()
-            return redirect('contact:contact')         
-
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = ContactForm()
-    return render(request, 'contact/contact.html', {'form': form})
+def successView(request):
+    return render(request, 'contact/success.html')

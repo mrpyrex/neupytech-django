@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <title>NeuPyTech</title>
 </head>
 <body>
@@ -25,7 +26,6 @@
                     <li><a href="{% url 'pages:portfolio' %}">Portfolio</a></li>
                     <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
                     <li><a href="{% url 'posts:list' %}">Blog</a></li>
-                   
                     </ul>
                 </div>
             </div>
@@ -35,8 +35,7 @@
         <li><a href="{% url 'pages:about' %}">About Us</a></li>
         <li><a href="{% url 'pages:portfolio' %}">Portfolio</a></li>
         <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
-        <li><a href="{% url 'posts:list' %}">Blog</a></li>
-        
+        <li><a href="{% url 'posts:list' %}">Blog</a></li> 
     </ul>
 
     <!-- Django Template Tags -->
@@ -53,7 +52,7 @@
                 <hr>
                     <p><i class="fas fa-road"></i>14, Ring Road Opp. All Weather, Idua, Eket</p>
                     <p><i class="fas fa-phone-volume"></i>+234 811 5234 897</p>
-                    <p><i class="fas fa-envelope"></i>info@neupytech.com</p>
+                    <p><i class="fas fa-envelope"></i>support@neupytech.com</p>
                 <hr>
                     <a href="https://web.facebook.com/neupytech/" target="_blank"><i class="fab fa-facebook-f mr-4"></i></a>
                     <a href="https://twitter.com/neupytech" target="_blank"><i class="fab fa-twitter mr-4"></i></a>

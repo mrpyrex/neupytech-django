@@ -14,7 +14,7 @@
         <div class="card-image">
         <img src="{{ post.thumb.url }}" alt=""/>
         </div>
-        <h2 class="card-title">{{ post.title }}</h2>
+        <h2 class="card-title"><a href="{% url 'posts:details' post.slug %}">{{ post.title }}</a></h2>
         <div class="card-content">
           <p>{{ post.date }}</p>
         </div>
