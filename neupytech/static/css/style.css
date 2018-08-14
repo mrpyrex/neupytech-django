@@ -13,6 +13,12 @@ nav {
     background: #3385ff;
 }
 
+nav .brand-logo img{
+    height: 50px;
+    width: auto;
+    padding-top: 10px;
+}
+
 .overlay {
     background: rgba(63, 57, 77, 0.7);
     position: absolute;
@@ -22,6 +28,7 @@ nav {
     height: 100%;
     overflow: hidden;
 }
+
 
 #showcase {
     padding-top: 50px;
