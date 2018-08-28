@@ -3,160 +3,330 @@
     
 {% block content %}
 
-<header class="main-header">
-    <div class="overlay">
-        <div class="container center">
-            <div id="showcase">
-                <h1>Website Design/Development <span id="join"></span>& Digital Marketing</h1>
-                <p class="flow-text">We design and develop websites for businesses with stunning results</p>
-                <a class="btn" href="{% url 'contact:contact' %}">Contact Us</a>
+<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_4.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+        <div class="row row-mt-15em">
+            <div class="col-md-12 mt-text text-center animate-box" data-animate-effect="fadeInUp">
+                <h1>We Build <strong>Branded Platforms</strong></h1>	
+                <h2>We design and develop websites for businesses with stunning results</h2>
+                <div class="text-center"><a href="{% url 'contact:contact' %}" class="btn btn-primary btn-lg">Contact Us</a></div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Services Section
-==================
--->
+<div class="flex-section gtco-gray-bg">
+    <div class="col-1">
+        <div class="text">
 
-<div class="container" id="box">
-    <h2 class="center">Our Services</h2>
-    <div class="row">
-        <div class="card col s12 m6 l4">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{% static "img/webdev.jpeg" %}">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">WEB Dev<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">WEB Dev<i class="material-icons right">close</i></span>
-                    <p>We take the research and build website that takes the user experience into consideration.</p>
+            <div class="row row-pb-sm">
+                <div class="col-md-12">
+                <h2>Creative Minds</h2>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae accusamus, fugiat ut! Ducimus accusamus, quos. Esse ea iste, expedita atque quod quo maxime, saepe! Architecto unde aliquid atque excepturi dolores dolore fugit rem recusandae amet a, molestiae et! Dolore, laborum?</p>
+                <p>Quaerat quisquam quasi minima at molestias porro accusantium qui atque doloremque ab, odio tempora obcaecati cumque veritatis quo, assumenda nihil dolor optio enim fugit accusamus laborum. Autem neque dignissimos, corrupti, fugiat labore nisi illo, delectus, alias natus optio distinctio culpa!</p>
                 </div>
             </div>
-            <div class="card col s12 m6 l4">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{% static "img/ecomm.jpeg" %}">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Ecommerce<i class="material-icons right">more_vert</i></span>
-                        <p><a href="#">This is a link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Ecommerce<i class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="check-li">
+                        <li>Quaerat quisquam quasi</li>
+                        <li>Accusantium qui atque doloremque</li>
+                        <li>Expedita atque quod</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="check-li">
+                        <li>Quaerat quisquam quasi</li>
+                        <li>Accusantium qui atque doloremque</li>
+                        <li>Expedita atque quod</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 flex-img" style="background-image: url(images/img_1.jpg);"></div>
+</div>
+
+<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_2.jpg)"  data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="gtco-container text-center">
+        <div class="display-t">
+            <div class="display-tc">
+                <h1 class="animate-box">Never Stop Learning</h1>
+            </div>	
+        </div>
+    </div>
+</div>
+
+<div class="flex-section reverse">
+    <div class="col-1">
+        <div class="text">
+
+            <div class="row row-pb-sm">
+                <div class="col-md-12">
+                    <h2>Expertise &amp; Beliefs</h2>
+                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae accusamus, fugiat ut! Ducimus accusamus, quos. Esse ea iste, expedita atque quod quo maxime, saepe! Architecto unde aliquid atque excepturi dolores dolore fugit rem recusandae amet a, molestiae et! Dolore, laborum?</p>
+                    <p>Quaerat quisquam quasi minima at molestias porro accusantium qui atque doloremque ab, odio tempora obcaecati cumque veritatis quo, assumenda nihil dolor optio enim fugit accusamus laborum. Autem neque dignissimos, corrupti, fugiat labore nisi illo, delectus, alias natus optio distinctio culpa!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="check-li">
+                        <li>Quaerat quisquam quasi</li>
+                        <li>Accusantium qui atque doloremque</li>
+                        <li>Expedita atque quod</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="check-li">
+                        <li>Quaerat quisquam quasi</li>
+                        <li>Accusantium qui atque doloremque</li>
+                        <li>Expedita atque quod</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-2 flex-img" style="background-image: url(images/img_bg_2.jpg);"></div>
+</div>
+
+<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_3.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="gtco-container text-center">
+        <div class="display-t">
+            <div class="display-tc">
+                <h1 class="animate-box">Quality Over Quantity</h1>
+            </div>	
+        </div>
+    </div>
+</div>
+
+<div class="overflow-hid"> 
+    <div class="gtco-section">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                    <h2>Services</h2>
+                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="#" class="gtco-card-item">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="{% static 'img/img_1.jpg' %}" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="gtco-text">
+                            <h2>Data Analytics</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                            <p><span class="btn btn-primary">Learn more</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="#" class="gtco-card-item">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="{% static 'img/img_2.jpg' %}" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="gtco-text">
+                            <h2>Web Development</h2>
+                            <p>We take the research and build website that takes the user ...</p>
+                            <p><span class="btn btn-primary">Learn more</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="#" class="gtco-card-item">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="{% static 'img/img_3.jpg' %}" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="gtco-text">
+                            <h2>Branding</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                            <p><span class="btn btn-primary">Learn more</span></p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="#" class="gtco-card-item">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="{% static 'img/img_1.jpg' %}" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="gtco-text">
+                            <h2>eCommerce Development</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                            <p><span class="btn btn-primary">Learn more</span></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="#" class="gtco-card-item">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="{% static 'img/img_2.jpg' %}" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="gtco-text">
+                            <h2>Design &amp; UX</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                            <p><span class="btn btn-primary">Learn more</span></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="#" class="gtco-card-item">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="{% static 'img/img_3.jpg' %}" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="gtco-text">
+                            <h2>Strategy</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                            <p><span class="btn btn-primary">Learn more</span></p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="gtco-features">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                    <h2>How We Work</h2>
+                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <span class="icon">
+                            <i>1</i>
+                        </span>
+                        <h3>Design</h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident.</p>
                     </div>
                 </div>
-                <div class="card col s12 m6 l4">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="{% static "img/maintenance.jpeg" %}">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">WEB Maintenance<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">WEB Maintenance<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                    <div class="card col s12 m6 l4">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="{% static "img/branding.jpeg" %}">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Biz Branding<i class="material-icons right">more_vert</i></span>
-                                <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Biz Branding<i class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                            </div>
-                        </div>
-            <div class="card col s12 m6 l4">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{% static "img/research.jpeg" %}">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Research/Strategy<i class="material-icons right">more_vert</i></span>
-                        <p><a href="#">This is a link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Research/Strategy<i class="material-icons right">close</i></span>
-                        <p>We mine deep to bring you the best with regards to your specific business needs. And then we put the strategy to achieving your goal in motion.</p>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <span class="icon">
+                            <i>2</i>
+                        </span>
+                        <h3>Develop</h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident.</p>
                     </div>
                 </div>
-                <div class="card col s12 m6 l4">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="{% static "img/market.jpeg" %}">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">DIGITAL Marketing<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">DIGITAL Marketing<i class="material-icons right">close</i></span>
-                            <p>We empower your customers and make them feel confident in your product through marketing</p>
-                        </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <span class="icon">
+                            <i>3</i>
+                        </span>
+                        <h3>Launch</h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident.</p>
                     </div>
+                </div>
+                
+
+            </div>
+        </div>
     </div>
 </div>
 
 
-<!-- About Section
-==================
--->
-
-<section class="center grey lighten-3" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <h2 class="">Who We Are</h2>
-                <p class="flow-text">We are focused on helping our clients accomplish wonderfull things through online marketing. We start typically by creating a brand new staunning website or redesigning an existing one; evolving into a long-term relationship with them.
-
-            </div>
-            <a class="btn" href="{% url 'pages:about' %}">Read More</a>
+<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="gtco-container text-center">
+        <div class="display-t">
+            <div class="display-tc">
+                <h1>We have high quality services that you will surely love!</h1>
+            </div>	
         </div>
     </div>
-</section>
+</div>
 
-<!--
-                Our projects ride on analytics and constant improvement. So we leverage on technology so we do what we do best so that our clients can focus on running their business with all confidence!</p>
-            -->
+<div id="gtco-counter" class="gtco-section">
+    <div class="gtco-container">
 
-<!-- Subscribe Section
-==================
--->
-
-<section class="section center container">
-    <h2>YOU WANT DEALS AND TIPS?</h2>
-    <P>Subscribe to get our newsletter</P>
-    <div class="row">
-        <form action="{% url 'pages:home' %}" method="POST">
-            {% csrf_token %}
-            <div class="input-field">
-                {{ join }}
-            </div>
-            <button class="btn">Join</button>
-        </form>
-    </div>   
-</section>
-
-<!-- Team Section
-==================
--->
-
-<section class="section" id="team">
-    <div class="container center">
         <div class="row">
-            <div class="col s12">
-                <h2>Meet The Team</h2>
-                <p class="flow-text">Our dynamic team are both talented and courteous, bringing unique skills and great levels of expertise to every project.</p>
-                <a href="{% url 'team:team' %}" class="btn">Learn more</a>
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                <h2>Facts</h2>
+                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="196" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Clients</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="97" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Projects</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="12402" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Coffee</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="12202" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Line of codes</span>
+
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div id="gtco-subscribe">
+    <div class="gtco-container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                <h2>Subscribe</h2>
+                <p>Be the first to know about the new templates.</p>
+            </div>
+        </div>
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2">
+                <form action="{% url 'pages:home' %}"  method="POST" class="form-inline">{% csrf_token %}
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            {{ form }}
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <button type="submit" class="btn btn-default btn-block">Subscribe</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</section>
+</div>
     
 {% endblock %}

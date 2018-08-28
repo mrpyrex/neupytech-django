@@ -1,106 +1,186 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{% static "css/materialize.min.css" %}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>NeuPyTech</title>
-</head>
-<body>
-    
-    <div class="navbar-fixed">
-        <nav>
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="{% url 'pages:home' %}" class="brand-logo"><img src="{% static "img/logo9.png" %}" alt=""></a>
-                    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                    <li><a href="{% url 'pages:about' %}">About Us</a></li>
-                    <li><a href="{% url 'pages:portfolio' %}">Portfolio</a></li>
-                    <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
-                    <li><a href="{% url 'posts:list' %}">Blog</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="{% url 'pages:about' %}">About Us</a></li>
-        <li><a href="{% url 'pages:portfolio' %}">Portfolio</a></li>
-        <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
-        <li><a href="{% url 'posts:list' %}">Blog</a></li> 
-    </ul>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NeuPyTech | {{ title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="GetTemplates.co" />
 
-    <!-- Django Template Tags -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+
+	</head>
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+	
+	<div class="page-inner">
+
+	<div id="head-top" style="position: absolute; width: 100%; top: 0; ">
+		<div class="gtco-top">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<div id="gtco-logo"><a href="{% url 'pages:home' %}"><img id="logo" src="{% static "img/logo11.png" %}" alt=""></a></div>
+					</div>
+					<div class="col-md-6 col-xs-6 social-icons">
+						<ul class="gtco-social-top">
+							<li><a href="https://web.facebook.com/neupytech/" target="_blank"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://twitter.com/neupytech" target="_blank"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<nav class="gtco-nav sticky-banner" role="navigation">
+			<div class="gtco-container">
+				
+				<div class="row">
+					<div class="col-xs-12 text-center menu-1">
+						<ul>
+							<li><a href="{% url 'pages:home' %}">Home</a></li>
+							<li class="has-dropdown">
+								<a href="services.html">Services</a>
+								<ul class="dropdown">
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">Development</a></li>
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">Marketing</a></li>
+								</ul>
+							</li>
+							<li><a href="{% url 'pages:portfolio' %}">Portfolio</a></li>
+							<li><a href="{% url 'posts:list' %}">Blog</a></li>
+							<li class=""><a href="{% url 'contact:contact' %}">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+	</div>
+	
     {% block content %}
     {% endblock %}
 
-<section class="section center tech-map">
-    <div id="map"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m6 offset-m6">
-                <div class="card-panel z-depth-5">
-                <h5>Contact Us</h5>
-                <hr>
-                    <p><i class="fas fa-road"></i>14, Ring Road Opp. All Weather, Idua, Eket</p>
-                    <p><i class="fas fa-phone-volume"></i>+234 811 5234 897</p>
-                    <p><i class="fas fa-envelope"></i>support@neupytech.com</p>
-                <hr>
-                    <a href="https://web.facebook.com/neupytech/" target="_blank"><i class="fab fa-facebook-f mr-4"></i></a>
-                    <a href="https://twitter.com/neupytech" target="_blank"><i class="fab fa-twitter mr-4"></i></a>
-                    <a href="" target="_blank"><i class="fab fa-instagram mr-4"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        
-<div class="center">
-    <div class="row">
-        <div class="s12">
-            <p>Copyright NEUPYTECH &copy; {% now "Y" %}. All rights reserved.</p>
-        </div>
-    </div>
-</div>
-<!-- Map JS
-==================
--->
-    <script>
-        function initMap () {
-          var options = {
-            zoom: 8,
-            center: {lat:4.9300,lng:7.8722}
-          }
-          var map = new google.maps.Map (document.getElementById('map'), options);
-          var marker = new google.maps.Marker ({
-            position: {lat:4.6467,lng:7.9429},
-            map:map
-          })
-        }
-    </script>
-    
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVEe2iQi3o5-_CcZ0CSV5MJ-18pJTJr3o&callback=initMap"
-    async defer></script>
-    <script src="{% static "js/materialize.min.js" %}"></script>
 
-    <!-- Mobile Navbar -->
-    <script>
-       //const sideNav = document.querySelectorAll('.sidenav');
-       //M.Sidenav.init(sideNav, {});    
-       
-       document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, {});
-      });
-    
-    </script>
-</body>
+	<footer id="gtco-footer" role="contentinfo">
+		<div class="gtco-container">
+			<div class="row row-p	b-md">
+
+				<div class="col-md-4">
+					<div class="gtco-widget">
+						<h3>About Us</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos molestias quod sint ipsum possimus temporibus officia iste perspiciatis consectetur in fugiat.</p>
+						<p><a href="{% url 'pages:about' %}">Learn more...</a></p>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<div class="gtco-widget">
+						<h3>Services</h3>
+						<ul class="gtco-footer-links">
+							<li><a href="#">Data Analytics</a></li>
+							<li><a href="#">Web Development</a></li>
+							<li><a href="#">Branding &amp; Identity</a></li>
+							<li><a href="#">eCommerce Development</a></li>
+							<li><a href="#">Design &amp; UX</a></li>
+							<li><a href="#">Strategt</a></li>
+						</ul>
+					</div>
+				</div>
+
+				
+
+				<div class="col-md-3 col-md-push-1">
+					<div class="gtco-widget">
+						<h3>Get In Touch</h3>
+						<ul class="gtco-quick-contact">
+							<li><a href="#"><i class="icon-phone"></i> +234 811 362 0163</a></li>
+							<li><a href="#"><i class="icon-mail2"></i> support@neupytech.com</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12">
+					<p class="pull-left">
+						<small class="block">&copy; {% now "Y" %} NEUPYTECH. All Rights Reserved.</small> 
+					</p>
+					<p class="pull-right">
+						<ul class="gtco-social-icons pull-right">
+							<li><a href="https://twitter.com/neupytech" target="_blank"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://web.facebook.com/neupytech/" target="_blank"><i class="icon-facebook"></i></a></li>
+							<li><a href="" target="_blank"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'js/sticky.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<!-- countTo -->
+	<script src="{% static 'js/jquery.countTo.js' %}"></script>
+
+	<!-- Stellar Parallax -->
+	<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+
+	<!-- Magnific Popup -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/magnific-popup-options.js' %}"></script>
+	
+	<!-- Main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
 </html>
+

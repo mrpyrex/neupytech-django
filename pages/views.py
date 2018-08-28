@@ -1,41 +1,26 @@
 from django.shortcuts import render
-from django.contrib import messages
-from .models import Join
-from .forms import JoinForm
+
+from newsletter.models import Join
+from newsletter.forms import JoinForm
 
 # Create your views here.
 
-def index(request):
-    join = JoinForm(request.POST or None)
-
-    if join.is_valid():
-        instance = join.save(commit=False)
-        if Join.objects.filter(email=instance.email).exists():
-            messages.warning(request, "We have your email already",)
-        else:
-            instance.save()
-            messages.success(request, "Thanks for Subscibing to our newsletter!")
-    
-    context = {'join': join,}
-
+def index(request):  
+    form = JoinForm()
+    context = {
+        'title': 'Home',
+        'form': form,
+    }
     return render(request, 'pages/index.html', context)
 
-def unsubscribe(request):
-    join = JoinForm(request.POST or None)
-    if join.is_valid():
-        instance = join.save(commit=False)
-        if Join.objects.filter(email=instance.email).exists():
-            Join.objects.filter(email=instance.email).delete()
-        else:
-            print("Sorry but we didn't find that email address")
-
-    context = {'join': join,}
-
-    return render(request, 'pages/unsubscribe.html', context)
-    
-
 def about(request):
-    return render(request, 'pages/about.html')
+    context = {
+        'title': 'About Us',
+    }
+    return render(request, 'pages/about.html', context)
 
 def portfolio(request):
-    return render(request, 'pages/portfolio.html')
+    context = {
+        'title': 'Our Works',
+    }
+    return render(request, 'pages/portfolio.html', context)
